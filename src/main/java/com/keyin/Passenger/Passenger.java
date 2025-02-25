@@ -2,6 +2,8 @@ package com.keyin.Passenger;
 
 import jakarta.persistence.*;
 import java.util.List;
+import com.keyin.City.City;
+import com.keyin.Aircraft.Aircraft;
 
 @Entity
 public class Passenger {

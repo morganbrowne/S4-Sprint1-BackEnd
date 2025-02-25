@@ -1,5 +1,6 @@
 package com.keyin.City;
 
+import com.keyin.Airport.Airport;
 import jakarta.persistence.*;
 import java.util.List;
 
