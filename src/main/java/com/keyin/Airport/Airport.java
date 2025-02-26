@@ -4,10 +4,8 @@ import java.lang.annotation.Inherited;
 
 import javax.annotation.processing.Generated;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.SequenceGenerator;
+import com.keyin.City.City;
+import jakarta.persistence.*;
 
 @Entity
 public class Airport {
@@ -18,6 +16,10 @@ public class Airport {
 
     private String name;
     private String code;
+
+    @ManyToOne
+    @JoinColumn(name = "city_id")
+    private City city;
 
     public long getId() {
         return id;
@@ -41,5 +43,13 @@ public class Airport {
 
     public void setCode(String code) {
         this.code = code;
+    }
+
+    public City getCity() {
+        return city;
+    }
+
+    public void setCity(City city) {
+        this.city = city;
     }
 }
